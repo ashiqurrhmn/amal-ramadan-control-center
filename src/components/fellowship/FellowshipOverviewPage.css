@@ -1,0 +1,133 @@
+.fellowship-page {
+  --f-teal: #328578;
+  --f-gold: #c6973a;
+  --f-coral: #df7868;
+  --f-violet: #8173d0;
+  --f-gray: #656565;
+  --f-red: #e63842;
+}
+
+.fellowship-header {
+  padding: 0 0 13px;
+  border-bottom: 1px solid #202020;
+}
+
+.fellowship-header > p {
+  margin: 0 0 5px;
+  color: var(--ov-muted);
+  font-size: 12px;
+}
+
+.fellowship-header h1 {
+  margin: 0 0 10px;
+  font-family: var(--font-display);
+  font-size: 27px;
+  font-weight: 400;
+  line-height: 1.1;
+}
+
+.fellowship-meta { display: flex; align-items: center; flex-wrap: wrap; gap: 10px; color: var(--ov-muted); font-size: 12px; }
+.fellowship-meta strong { font-weight: 600; }
+.fellowship-summary-grid { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 16px; margin-top: 16px; }
+.fellowship-summary-grid .overview-card { position: relative; display: flex; flex-direction: column; min-height: 360px; }
+.fellowship-summary-grid .overview-big-number { margin-top: 15px; }
+.fellowship-summary-grid .overview-card-heading h3 { font-size: 11px; }
+.fellowship-summary-grid .overview-card-heading > span { font-size: 11px; }
+.fellowship-card-caption { margin: 7px 0 13px; color: var(--ov-muted); font-size: 12px; }
+.fellowship-card-link { align-self: flex-start; margin-top: auto; padding-top: 18px; }
+.fellowship-route-share { display: flex; height: 9px; overflow: hidden; border-radius: 99px; }
+.fellowship-route-share span:first-child { width: 60.7%; background: var(--f-teal); }
+.fellowship-route-share span:nth-child(2) { width: 15%; background: var(--f-gold); }
+.fellowship-route-share span:nth-child(3) { width: 9.7%; background: var(--f-coral); }
+.fellowship-route-share span:last-child { width: 14.6%; background: var(--f-violet); }
+.fellowship-small-legend { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 8px; margin-top: 13px; color: var(--ov-muted); font-size: 11px; }
+.fellowship-small-legend .overview-legend-item { overflow: hidden; text-overflow: ellipsis; }
+.fellowship-delta-line { display: flex; align-items: center; gap: 10px; margin: 6px 0 11px; color: var(--ov-muted); font-size: 12px; }
+.fellowship-delta-line span { color: var(--ov-red); font-weight: 700; }
+.fellowship-summary-grid .overview-note { margin-top: 2px; }
+.fellowship-paying-list { gap: 10px; margin-top: 10px; }
+.fellowship-paying-list .overview-progress-row { grid-template-columns: minmax(52px, .9fr) minmax(50px, 1fr) auto; }
+.fellowship-paying-list .overview-progress-row:last-child .overview-progress-fill { background: var(--f-violet); }
+.fellowship-payout-period { margin: 14px 0 14px; color: var(--ov-muted); font-size: 12px; }
+.fellowship-payout-item { display: flex; flex-direction: column; gap: 4px; padding: 9px 0 18px; border-top: 1px solid #303030; }
+.fellowship-payout-item > span, .fellowship-payout-item small { color: var(--ov-muted); font-size: 12px; }
+.fellowship-payout-item strong { font-family: var(--font-display); font-size: 24px; font-weight: 400; line-height: 1; }
+.fellowship-blocked { margin: 1px 0 0; color: var(--ov-muted); font-size: 12px; line-height: 1.5; }
+.fellowship-blocked strong { color: var(--f-gold); }
+
+.fellowship-section { margin-top: 42px; }
+.fellowship-chain-grid .overview-card { min-height: 333px; }
+.fellowship-status-card .overview-big-number { margin: 13px 0 12px; }
+.fellowship-status-bar { display: flex; height: 12px; overflow: hidden; border-radius: 99px; }
+.fellowship-fill--teal, .fellowship-status-dot--teal { background: var(--f-teal); }
+.fellowship-fill--gold, .fellowship-status-dot--gold { background: var(--f-gold); }
+.fellowship-fill--gray, .fellowship-status-dot--gray { background: var(--f-gray); }
+.fellowship-fill--red, .fellowship-status-dot--red { background: var(--f-red); }
+.fellowship-status-list { display: grid; gap: 13px; margin-top: 16px; }
+.fellowship-status-row { display: grid; grid-template-columns: 8px minmax(0, 1fr) 28px 35px; align-items: center; gap: 10px; }
+.fellowship-status-dot { width: 8px; height: 8px; border-radius: 2px; }
+.fellowship-status-row > div { display: flex; flex-direction: column; gap: 2px; min-width: 0; }
+.fellowship-status-row strong { font-size: 12px; font-weight: 600; }
+.fellowship-status-row > div > span, .fellowship-status-row > span:last-child { color: var(--ov-muted); font-size: 12px; }
+.fellowship-status-row > strong, .fellowship-status-row > span:last-child { text-align: right; }
+.fellowship-chart-card .overview-inline-legend { gap: 9px 12px; margin: 16px 0 11px; font-size: 11px; }
+.fellowship-chart-card .overview-chart { height: 200px; margin-top: 6px; }
+.fellowship-chart-card .overview-chart-yaxis { padding-bottom: 24px; }
+.fellowship-chart-card .overview-note { margin-top: 10px; }
+
+.fellowship-routes-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 16px; }
+.fellowship-route-card { display: flex; flex-direction: column; min-width: 0; min-height: 350px; padding: 17px 16px 18px; border: 1px solid var(--ov-border); border-top: 3px solid var(--route-color); border-radius: 8px; background: var(--ov-card); color: var(--ov-text); cursor: pointer; text-align: left; }
+.fellowship-routes-grid .fellowship-route-card:last-child { min-height: 300px; }
+.fellowship-route-card:hover { background: #242424; }
+.fellowship-route-card--teal { --route-color: var(--f-teal); }
+.fellowship-route-card--gold { --route-color: var(--f-gold); }
+.fellowship-route-card--coral { --route-color: var(--f-coral); }
+.fellowship-route-card--violet { --route-color: var(--f-violet); }
+.fellowship-route-heading { display: flex; justify-content: space-between; gap: 10px; margin-bottom: 15px; }
+.fellowship-route-heading h3 { margin: 0; color: var(--ov-muted); font-family: var(--font-body); font-size: 12px; font-weight: 700; text-transform: uppercase; }
+.fellowship-route-heading > span { color: var(--ov-muted); font-size: 12px; white-space: nowrap; }
+.fellowship-route-metrics { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 15px 12px; }
+.fellowship-route-metrics > div { display: flex; flex-direction: column; min-width: 0; }
+.fellowship-route-metrics span, .fellowship-route-metrics small { color: var(--ov-muted); font-size: 12px; }
+.fellowship-route-metrics strong { margin: 4px 0 1px; font-family: var(--font-display); font-size: 25px; font-weight: 400; line-height: 1; }
+.fellowship-route-card h4 { margin: 20px 0 13px; color: var(--ov-muted); font-family: var(--font-body); font-size: 12px; font-weight: 700; text-transform: uppercase; }
+.fellowship-tier-list { display: grid; gap: 10px; }
+.fellowship-tier-row { display: grid; grid-template-columns: minmax(0, 1fr) minmax(70px, 1fr) 30px; align-items: center; gap: 8px; font-size: 12px; }
+.fellowship-tier-row > span { overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.fellowship-tier-row > div { height: 10px; overflow: hidden; border-radius: 99px; background: #3b3b3b; }
+.fellowship-tier-row i { display: block; height: 100%; border-radius: 99px; background: var(--route-color); }
+.fellowship-tier-row strong { text-align: right; font-weight: 500; }
+
+.fellowship-table-section { margin-bottom: 40px; }
+.fellowship-table-card { padding: 16px; border: 1px solid var(--ov-border); border-radius: 8px; background: var(--ov-card); }
+.fellowship-table-scroll { overflow-x: auto; }
+.fellowship-table-card table { width: 100%; min-width: 830px; border-collapse: collapse; font-size: 12px; }
+.fellowship-table-card th { padding: 4px 8px; border-bottom: 1px solid #303030; color: var(--ov-muted); font-weight: 500; text-align: left; white-space: nowrap; }
+.fellowship-table-card td { padding: 8px; border-bottom: 1px solid #292929; white-space: nowrap; }
+.fellowship-table-card th:first-child, .fellowship-table-card td:first-child { width: 50px; }
+.fellowship-table-card tr:last-child td { border-bottom: 0; }
+.fellowship-table-card td button { padding: 0; border: 0; background: transparent; color: var(--ov-text); cursor: pointer; font-size: inherit; font-weight: 600; }
+.fellowship-table-card td button:hover { color: var(--f-teal); text-decoration: underline; }
+.fellowship-table-card .overview-note { margin-top: 15px; }
+
+@media (max-width: 1200px) {
+  .fellowship-summary-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .fellowship-summary-grid .overview-card { min-height: 300px; }
+  .fellowship-routes-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+}
+
+@media (max-width: 720px) {
+  .fellowship-summary-grid, .fellowship-routes-grid { grid-template-columns: minmax(0, 1fr); }
+  .fellowship-summary-grid .overview-card { min-height: 0; }
+  .fellowship-card-link { margin-top: 24px; }
+  .fellowship-chain-grid .overview-card { min-height: 0; }
+  .fellowship-route-card { min-height: 0; }
+  .fellowship-routes-grid .fellowship-route-card:last-child { min-height: 0; }
+}
+
+@media (max-width: 440px) {
+  .fellowship-page .overview-card { overflow: hidden; }
+  .fellowship-status-row { grid-template-columns: 8px minmax(0, 1fr) 24px 29px; gap: 6px; }
+  .fellowship-chart-card .overview-inline-legend { gap: 7px; }
+  .fellowship-chart-card .overview-legend-item { max-width: 48%; overflow: hidden; text-overflow: ellipsis; }
+}
