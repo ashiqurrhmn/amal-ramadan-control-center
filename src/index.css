@@ -1,0 +1,25 @@
+:root {
+  font-family: var(--font-body);
+  color: var(--foreground);
+  background: var(--background);
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  /* Light theme values from the supplied design kit. */
+  --background: #fff8f0;
+  --foreground: #1a1a2e;
+  --card: #ffffff;
+  --muted-foreground: #5a5a5a;
+  --border: rgba(26, 26, 46, .12);
+  --navy: #1b1f33;
+  --navy-fg: #e8eaf4;
+  --navy-muted: #9aa0be;
+  --navy-active: #263047;
+  --teal: #2e7d6f;
+  --font-display: 'Playfair Display', Georgia, serif;
+  --font-body: Inter, system-ui, sans-serif;
+}
+* { box-sizing: border-box; }
+body { min-width: 320px; min-height: 100svh; margin: 0; }
+button, input { font: inherit; }
+:focus-visible { outline: 2px solid var(--teal); outline-offset: 3px; }
