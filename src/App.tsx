@@ -3,6 +3,7 @@ import { Sidebar } from './components/sidebar/Sidebar'
 import { navigation } from './components/sidebar/navigation'
 import { OverviewPage } from './components/overview/OverviewPage'
 import { FellowshipOverviewPage } from './components/fellowship/FellowshipOverviewPage'
+import { AllMembersPage } from './components/members/AllMembersPage'
 import './App.css'
 
 function App() {
@@ -26,16 +27,23 @@ function App() {
           setSidebarOpen(false)
         }}
       />
-      <main className={`app-main${activePage === 'overview' || activePage === 'fellowship-overview' ? ' app-main--overview' : ''}`} id="main-content">
-        <button className="mobile-menu-button" type="button"
-          onClick={() => setSidebarOpen(true)} aria-label="Open navigation menu"
-          aria-expanded={sidebarOpen} aria-controls="app-sidebar">
+      <main className={`app-main${['overview', 'fellowship-overview', 'all-members'].includes(activePage) ? ' app-main--overview' : ''}`} id="main-content">
+        <button
+          className="mobile-menu-button"
+          type="button"
+          onClick={() => setSidebarOpen(true)}
+          aria-label="Open navigation menu"
+          aria-expanded={sidebarOpen}
+          aria-controls="app-sidebar"
+        >
           <span aria-hidden="true">☰</span>
         </button>
         {activePage === 'overview' ? (
           <OverviewPage onNavigate={setActivePage} />
         ) : activePage === 'fellowship-overview' ? (
           <FellowshipOverviewPage onNavigate={setActivePage} />
+        ) : activePage === 'all-members' ? (
+          <AllMembersPage />
         ) : (
           <div className="page-content">
             <p className="page-eyebrow">Admin dashboard</p>
