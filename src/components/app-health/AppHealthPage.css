@@ -1,0 +1,11 @@
+.app-health-page { max-width: 1280px; margin: 0 auto; }
+.app-health-header { margin-bottom: 20px; }
+.app-health-header p { margin: 0 0 6px; color: var(--ov-muted); font-size: 12px; }
+.app-health-header h1 { margin: 0; color: var(--ov-heading); font-family: var(--font-display); font-size: 27px; font-weight: 400; }
+.app-health-card { padding: 20px 18px; border: 1px solid var(--ov-border); border-radius: 8px; background: var(--ov-card); }
+.app-health-card h2 { margin: 0 0 10px; color: var(--ov-text); font-size: 15px; font-weight: 600; }
+.app-health-card p { margin: 0 0 9px; color: var(--ov-muted); font-size: 13px; }
+.app-health-card ul { display: grid; gap: 8px; margin: 0; padding-left: 20px; list-style: none; }
+.app-health-card li { padding-left: 0; font-size: 13px; line-height: 1.45; }
+.app-health-card li strong { font-weight: 600; }
+.app-health-card li span { color: var(--ov-muted); }

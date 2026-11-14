@@ -4,6 +4,7 @@ import { navigation } from './components/sidebar/navigation'
 import { OverviewPage } from './components/overview/OverviewPage'
 import { FellowshipOverviewPage } from './components/fellowship/FellowshipOverviewPage'
 import { GRoutePage } from './components/fellowship/GRoutePage'
+import { AppHealthPage } from './components/app-health/AppHealthPage'
 import { AllMembersPage } from './components/members/AllMembersPage'
 import './App.css'
 
@@ -41,7 +42,7 @@ function App() {
           setSidebarOpen(false)
         }}
       />
-      <main className={`app-main${['overview', 'fellowship-overview', 'g-route', 'all-members'].includes(activePage) ? ' app-main--overview' : ''}`} id="main-content">
+      <main className={`app-main${['overview', 'fellowship-overview', 'g-route', 'all-members', 'app-health'].includes(activePage) ? ' app-main--overview' : ''}`} id="main-content">
         <button
           className="mobile-menu-button"
           type="button"
@@ -63,6 +64,8 @@ function App() {
           <GRoutePage selectedRoute={selectedGRoute} onSelectRoute={setSelectedGRoute} />
         ) : activePage === 'all-members' ? (
           <AllMembersPage />
+        ) : activePage === 'app-health' ? (
+          <AppHealthPage />
         ) : (
           <div className="page-content">
             <p className="page-eyebrow">Admin dashboard</p>
