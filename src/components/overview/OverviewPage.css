@@ -1,18 +1,4 @@
 .overview-page {
-  --ov-card: #1f1f1f;
-  --ov-border: #292929;
-  --ov-text: #ededed;
-  --ov-muted: #858585;
-  --ov-teal: #328578;
-  --ov-teal-bright: #0fa987;
-  --ov-gold: #c6973a;
-  --ov-amber: #e9a700;
-  --ov-violet: #8173d0;
-  --ov-blue: #3198f4;
-  --ov-orange: #f56a22;
-  --ov-gray: #6b6b6b;
-  --ov-green: #43d466;
-  --ov-red: #e34b50;
   width: 100%;
   max-width: none;
   color: var(--ov-text);
@@ -27,13 +13,13 @@
   gap: 20px;
   min-height: 75px;
   padding-bottom: 14px;
-  border-bottom: 1px solid #202020;
+  border-bottom: 1px solid var(--ov-divider);
 }
 .overview-header > div:first-child { min-width: 0; }
 
 .overview-header h1 {
   margin: 0 0 9px;
-  color: #f7f7f7;
+  color: var(--ov-heading);
   font-family: var(--font-display);
   font-size: 27px;
   font-weight: 400;
@@ -52,10 +38,10 @@
 .overview-meta { flex-wrap: wrap; gap: 12px; color: var(--ov-muted); font-size: 12px; }
 .overview-sample-badge { padding: 3px 9px; border: 1px solid var(--ov-gold); border-radius: 99px; color: var(--ov-gold); font-size: 11px; }
 .overview-header-controls { flex-wrap: wrap; justify-content: flex-end; gap: 14px; }
-.overview-segmented { display: inline-flex; gap: 2px; padding: 3px; border-radius: 99px; background: #202020; }
+.overview-segmented { display: inline-flex; gap: 2px; padding: 3px; border-radius: 99px; background: var(--ov-control); }
 .overview-segmented button { min-height: 30px; padding: 0 14px; border: 0; border-radius: 99px; background: transparent; color: var(--ov-muted); cursor: pointer; font-size: 12px; white-space: nowrap; }
 .overview-segmented button.is-selected { background: var(--ov-teal); color: white; font-weight: 700; }
-.overview-segmented button:hover:not(.is-selected) { color: white; }
+.overview-segmented button:hover:not(.is-selected) { color: var(--ov-text); }
 
 .overview-quick-actions { margin-top: 16px; border: 1px solid var(--ov-border); border-radius: 8px; background: var(--ov-card); }
 .overview-quick-actions-toggle { display: flex; align-items: center; gap: 10px; width: 100%; min-height: 40px; padding: 6px 15px; border: 0; background: transparent; color: var(--ov-text); cursor: pointer; text-align: left; }
@@ -69,7 +55,7 @@
 
 .overview-section { margin-top: 43px; }
 .overview-section-heading { display: flex; align-items: baseline; gap: 11px; margin-bottom: 14px; }
-.overview-section-heading h2 { margin: 0; color: #f2f2f2; font-family: var(--font-body); font-size: 15px; font-weight: 600; }
+.overview-section-heading h2 { margin: 0; color: var(--ov-heading); font-family: var(--font-body); font-size: 15px; font-weight: 600; }
 .overview-section-heading span { color: var(--ov-muted); font-size: 12px; }
 .overview-grid { display: grid; gap: 16px; }
 .overview-grid--two { grid-template-columns: repeat(2, minmax(0, 1fr)); }
@@ -102,7 +88,7 @@
 .overview-chart-yaxis, .overview-line-yaxis { display: flex; flex: 0 0 28px; flex-direction: column; justify-content: space-between; padding: 0 0 24px; color: var(--ov-muted); font-size: 11px; }
 .overview-chart-main { position: relative; display: flex; flex: 1; flex-direction: column; min-width: 0; }
 .overview-chart-grid { position: absolute; inset: 0 0 24px; display: flex; flex-direction: column; justify-content: space-between; }
-.overview-chart-grid i { width: 100%; height: 1px; background: #333; }
+.overview-chart-grid i { width: 100%; height: 1px; background: var(--ov-grid); }
 .overview-chart-bars { position: relative; z-index: 1; display: flex; align-items: flex-end; justify-content: space-between; flex: 1; gap: 2px; min-height: 0; padding: 0 4px; }
 .overview-chart-bar-group { display: flex; align-items: flex-end; justify-content: center; flex: 1; gap: 1px; height: 100%; }
 .overview-chart-bar { flex: 1; max-width: 6px; min-height: 1px; border-radius: 2px 2px 0 0; }
@@ -118,7 +104,7 @@
 .overview-progress-list { display: grid; gap: 11px; }
 .overview-progress-row { display: grid; grid-template-columns: minmax(0, 1fr) minmax(90px, 1.15fr) auto; align-items: center; gap: 8px; min-width: 0; font-size: 12px; }
 .overview-progress-label { overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
-.overview-progress-track { display: flex; width: 100%; height: 10px; overflow: hidden; border-radius: 99px; background: #3a3a3a; }
+.overview-progress-track { display: flex; width: 100%; height: 10px; overflow: hidden; border-radius: 99px; background: var(--ov-track); }
 .overview-progress-fill { display: block; height: 100%; }
 .overview-progress-fill--teal { background: var(--ov-teal); }
 .overview-progress-fill--gold { background: var(--ov-gold); }
@@ -139,7 +125,7 @@
 .overview-metric > span { color: var(--ov-muted); font-size: 12px; }
 .overview-metric > strong { font-family: var(--font-display); font-size: 25px; font-weight: 400; line-height: 1; }
 .overview-metric small { font-size: 12px; }
-.overview-target-bar { position: relative; height: 10px; margin-top: 28px; border-radius: 99px; background: #3b3b3b; }
+.overview-target-bar { position: relative; height: 10px; margin-top: 28px; border-radius: 99px; background: var(--ov-track); }
 .overview-target-bar span { display: block; width: 41%; height: 100%; border-radius: 99px; background: var(--ov-red); }
 .overview-target-bar i { position: absolute; top: -4px; left: 60%; width: 2px; height: 18px; background: #a3a3a3; }
 
@@ -162,7 +148,7 @@
 .overview-line-chart { display: flex; gap: 4px; width: 100%; height: 149px; margin-top: 28px; }
 .overview-line-main { flex: 1; min-width: 0; }
 .overview-line-main svg { width: 100%; height: 125px; overflow: visible; }
-.overview-line-main line { stroke: #333; stroke-width: 1; }
+.overview-line-main line { stroke: var(--ov-grid); stroke-width: 1; }
 .overview-line-main polyline { fill: none; stroke: var(--ov-teal); stroke-width: 2; vector-effect: non-scaling-stroke; }
 .overview-conversion-list { margin-top: 18px; }
 .overview-conversion-list .overview-progress-row { grid-template-columns: minmax(85px, 1fr) minmax(100px, 1fr) minmax(75px, auto); }

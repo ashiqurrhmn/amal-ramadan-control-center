@@ -5,6 +5,8 @@ import './Sidebar.css'
 
 interface SidebarProps {
   activePage: string
+  theme: 'light' | 'dark'
+  onToggleTheme: () => void
   isOpen: boolean
   onClose: () => void
   onNavigate: (pageId: string) => void
@@ -41,7 +43,7 @@ function NavSection({ section, activePage, onNavigate }: {
   )
 }
 
-export function Sidebar({ activePage, isOpen, onClose, onNavigate }: SidebarProps) {
+export function Sidebar({ activePage, theme, onToggleTheme, isOpen, onClose, onNavigate }: SidebarProps) {
   const [search, setSearch] = useState('')
   const searchRef = useRef<HTMLInputElement>(null)
   const sidebarRef = useRef<HTMLElement>(null)
@@ -93,6 +95,14 @@ export function Sidebar({ activePage, isOpen, onClose, onNavigate }: SidebarProp
             <NavSection key={section.id} section={section} activePage={activePage} onNavigate={onNavigate} />
           )) : <p className="sidebar-empty">No pages found.</p>}
         </nav>
+        <div className="sidebar-theme">
+          <button type="button" className="sidebar-theme-toggle" onClick={onToggleTheme}
+            aria-label="Dark mode" aria-pressed={theme === 'dark'}>
+            <span className="sidebar-theme-icon" aria-hidden="true">{theme === 'dark' ? '☾' : '☀'}</span>
+            <span>Dark mode</span>
+            <span className="sidebar-theme-track" aria-hidden="true"><span /></span>
+          </button>
+        </div>
       </aside>
     </>
   )

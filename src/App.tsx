@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 import { Sidebar } from './components/sidebar/Sidebar'
 import { navigation } from './components/sidebar/navigation'
 import { OverviewPage } from './components/overview/OverviewPage'
@@ -7,6 +7,16 @@ import { AllMembersPage } from './components/members/AllMembersPage'
 import './App.css'
 
 function App() {
+  const [theme, setTheme] = useState<'light' | 'dark'>(() => {
+    const savedTheme = window.localStorage.getItem('amal-dashboard-theme')
+    const initialTheme = savedTheme === 'dark' ? 'dark' : 'light'
+    document.documentElement.dataset.theme = initialTheme
+    return initialTheme
+  })
+  useEffect(() => {
+    document.documentElement.dataset.theme = theme
+    window.localStorage.setItem('amal-dashboard-theme', theme)
+  }, [theme])
   const [activePage, setActivePage] = useState(() => {
     const requestedPage = new URLSearchParams(window.location.search).get('page')
     return navigation.some((section) => section.items.some((item) => item.id === requestedPage))
@@ -20,6 +30,8 @@ function App() {
     <div className="app-shell">
       <Sidebar
         activePage={activePage}
+        theme={theme}
+        onToggleTheme={() => setTheme((current) => current === 'light' ? 'dark' : 'light')}
         isOpen={sidebarOpen}
         onClose={() => setSidebarOpen(false)}
         onNavigate={(pageId) => {

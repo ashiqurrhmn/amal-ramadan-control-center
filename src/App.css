@@ -1,6 +1,6 @@
 .app-shell { display: flex; min-height: 100svh; }
 .app-main { flex: 1; min-width: 0; padding: 48px clamp(24px, 5vw, 72px); }
-.app-main--overview { padding: 34px 32px 42px; background: #0b0b0b; color: #f2f2f2; }
+.app-main--overview { padding: 34px 32px 42px; background: var(--background); color: var(--ov-text); }
 .page-content { max-width: 1280px; margin: 0 auto; }
 .page-eyebrow { margin: 0 0 12px; color: var(--muted-foreground); font-size: .75rem; font-weight: 700; letter-spacing: .12em; text-transform: uppercase; }
 .page-content h1 { margin: 0; font-family: var(--font-display); font-size: clamp(2rem, 4vw, 3rem); font-weight: 500; }
