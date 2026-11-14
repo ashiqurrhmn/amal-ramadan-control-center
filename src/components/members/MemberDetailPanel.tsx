@@ -1,5 +1,6 @@
 import { useState } from 'react'
 import type { MemberRecord } from './membersData'
+import { MemberTeamTree } from './MemberTeamTree'
 
 function DetailTile({ label, value }: { label: string; value: string | number }) {
   return <div className="member-detail-tile"><span>{label}</span><strong>{value}</strong></div>
@@ -43,6 +44,7 @@ export function MemberDetailPanel({ member, onClose }: { member: MemberRecord; o
       </div>
       <h3>Their team</h3>
       <div className="member-detail-team">{member.team.map((item) => <span key={item.label}><strong>{item.count}</strong> {item.label}</span>)}</div>
+      <MemberTeamTree member={member} />
     </aside>
   )
 }

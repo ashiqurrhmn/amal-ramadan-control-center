@@ -40,7 +40,6 @@
 .members-status--suspended, .members-status--removed { color: var(--ov-red); }
 .members-empty { margin: 0; padding: 22px; color: var(--ov-muted); }
 .members-table-wrap--panel-open .members-table { min-width: 0; }
-.members-table-wrap--panel-open .members-col-name,
 .members-table-wrap--panel-open .members-col-extra { display: none; }
 .members-table-wrap--panel-open .members-table td:nth-child(3),
 .members-table-wrap--panel-open .members-table td:nth-child(4),
@@ -71,6 +70,31 @@
 .member-detail-team { display: flex; flex-wrap: wrap; gap: 6px; }
 .member-detail-team span { padding: 4px 9px; border: 1px solid var(--ov-border); border-radius: 99px; color: var(--ov-muted); font-size: 12px; }
 .member-detail-team strong { color: var(--ov-text); }
+.member-team-tree { margin-top: 12px; }
+.member-team-tree-actions { display: flex; gap: 6px; margin-bottom: 8px; }
+.member-team-tree-actions button { min-height: 28px; padding: 2px 9px; border: 1px solid var(--ov-border); border-radius: 99px; background: transparent; color: var(--ov-muted); cursor: pointer; font-size: 12px; }
+.member-team-tree-actions button:hover { color: var(--ov-text); border-color: var(--members-teal); }
+.member-team-tree-root { overflow: hidden; border: 1px solid var(--ov-border); border-radius: 8px; }
+.member-team-tree-parent { display: flex; flex-direction: column; gap: 4px; padding: 10px 11px; border-left: 3px solid var(--members-teal); background: var(--ov-control-hover); }
+.member-team-tree-parent strong { font-size: 13px; }
+.member-team-tree-parent span { color: var(--ov-muted); font-size: 12px; }
+.member-team-tree-parent small { float: right; font-size: 12px; }
+.member-team-tree-list, .member-team-tree-children { margin: 0; padding: 0; list-style: none; }
+.member-team-tree-list > li + li { border-top: 1px solid var(--ov-border); }
+.member-team-tree-node { display: flex; align-items: center; flex-wrap: wrap; gap: 5px; min-height: 58px; padding: 7px 10px; }
+.member-team-tree-expand, .member-team-tree-spacer { flex: 0 0 21px; width: 21px; height: 21px; }
+.member-team-tree-expand { display: grid; place-items: center; border: 0; border-radius: 5px; background: var(--ov-control); color: var(--ov-text); cursor: pointer; line-height: 1; }
+.member-team-tree-node-info { display: flex; flex: 1 1 120px; flex-direction: column; gap: 3px; min-width: 0; }
+.member-team-tree-node-info strong { overflow: hidden; font-size: 12px; text-overflow: ellipsis; white-space: nowrap; }
+.member-team-tree-node-info span { color: var(--ov-muted); font-size: 11px; }
+.member-team-tree-node .members-status { min-height: 19px; padding: 1px 7px; font-size: 11px; }
+.member-team-tree-chain { flex: 0 0 100%; padding-left: 26px; color: var(--ov-muted); font-size: 11px; }
+.member-team-tree-children { margin: 0 10px 8px 30px; border-left: 1px solid var(--ov-border); }
+.member-team-tree-children li { display: flex; flex-wrap: wrap; align-items: center; gap: 4px 7px; padding: 6px 8px; }
+.member-team-tree-children li + li { border-top: 1px solid var(--ov-border); }
+.member-team-tree-children strong { font-size: 11px; }
+.member-team-tree-children span:not(.members-status), .member-team-tree-children small { color: var(--ov-muted); font-size: 11px; }
+.member-team-tree-children small { flex: 0 0 100%; }
 
 @media (max-width: 1300px) {
   .members-filters { grid-template-columns: minmax(220px, 1fr) repeat(4, minmax(105px, 1fr)) 92px; }
