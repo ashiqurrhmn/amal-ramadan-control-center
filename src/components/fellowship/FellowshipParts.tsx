@@ -45,11 +45,11 @@ export function WeeklySignupsCard() {
   )
 }
 
-export function RouteCard({ route, onNavigate }: { route: RouteSummary; onNavigate: (pageId: string) => void }) {
+export function RouteCard({ route, onNavigate }: { route: RouteSummary; onNavigate: (pageId: string, routeName?: string) => void }) {
   const maxTier = Math.max(...route.tiers.map((tier) => tier.count))
   return (
     <button type="button" className={`fellowship-route-card fellowship-route-card--${route.color}`}
-      onClick={() => onNavigate(route.id)} aria-label={`View ${route.name} members`}>
+      onClick={() => onNavigate(route.id, route.name)} aria-label={`View ${route.name} dashboard`}>
       <div className="fellowship-route-heading"><h3>{route.name}</h3><span>{route.members} members</span></div>
       <div className="fellowship-route-metrics">
         <div><span>Active</span><strong>{route.active}</strong><small>{route.activeShare}% of route</small></div>

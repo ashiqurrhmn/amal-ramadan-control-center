@@ -4,7 +4,7 @@ import { routes } from './fellowshipData'
 import '../overview/OverviewPage.css'
 import './FellowshipOverviewPage.css'
 
-export function FellowshipOverviewPage({ onNavigate }: { onNavigate: (pageId: string) => void }) {
+export function FellowshipOverviewPage({ onNavigate }: { onNavigate: (pageId: string, routeName?: string) => void }) {
   return (
     <div className="overview-page fellowship-page">
       <header className="fellowship-header">
